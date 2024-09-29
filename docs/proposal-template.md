@@ -25,7 +25,7 @@ We will use Python for backend development, Google Analytics for user tracking, 
 
 # Method/Approach
 
-(What is your estimated "plan of attack" for developing this project)
+Our development approach will follow an agile methodology. The project will be divided into smaller, manageable tasks, allowing us to focus on one feature at a time. This will ensure that each part of the project is built, tested, and refined progressively, with regular adjustments based on feedback and testing results.
 
 # Estimated Timeline
 
