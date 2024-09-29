@@ -1,4 +1,4 @@
-# The Flying Dragons
+# Team The Flying Dragons
 
 Project description (~1 paragraph)
 
