@@ -26,6 +26,7 @@ We will use Python for backend development, Google Analytics for user tracking, 
 # Method/Approach
 
 Our development approach will follow an agile methodology. The project will be divided into smaller, manageable tasks, allowing us to focus on one feature at a time. This will ensure that each part of the project is built, tested, and refined progressively, with regular adjustments based on feedback and testing results.
+We will meet in person or via Zoom for the planning and development of the project, in addition to individual work at home. All team members will take turns developing code, tests, and documentation to provide learning opportunities for everyone in different areas.
 
 # Estimated Timeline
 
