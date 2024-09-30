@@ -30,16 +30,16 @@ We will meet in person or via Zoom for the planning and development of the proje
 
 # Estimated Timeline
 
-Home Page/ Landing screen (2 weeks)
-Joint tracker (3 weeks)
-Calorie tracker (3 weeks)
-Workout plan creator (3 weeks)
-Connecting everything and adding front end (2 weeks)
+- Home Page/ Landing screen (2 weeks)
+- Joint tracker (3 weeks)
+- Calorie tracker (3 weeks)
+- Workout plan creator (3 weeks)
+- Connecting everything and adding front end (2 weeks)
 
 # Anticipated Problems
 
 (Describe any problems you foresee that you will need to overcome)
-front-end (Nobody knows any front end. nobody wants to learn front end)
-fitting together github with other pieces of software
+- front-end (Nobody knows any front end. nobody wants to learn front end)
+- fitting together github with other pieces of software
 
 Remember this is a living document is expected to be changed as you make progress on your project.
