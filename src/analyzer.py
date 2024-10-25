@@ -6,11 +6,65 @@ import numpy as np
 mp_drawing = mp.solutions.drawing_utils
 mp_pose = mp.solutions.pose
 
-cap = cv2.VideoCapture("/Users/nridd/Downloads/griffin.mov")
+'''import tkinter as tk
+from tkinter import filedialog
+
+def browse_file():
+	# Create a root window and hide it
+	root = tk.Tk()
+	root.withdraw()  # Hide the root window
+	
+	# Show file dialog and store selected file path
+	file_path = filedialog.askopenfilename(title="Select a file", 
+											filetypes=[("All Files", "*.*"), ("Video Files", "*.mp4 *.mov *.avi")])
+	print(f"Selected file: {file_path}")
+	
+	# Destroy the root window after use
+	root.destroy()
+	return file_path
+
+# Call the function
+selected_file = browse_file()
+print(str(selected_file))'''
+
+import tkinter as tk
+from tkinter import filedialog
+
+def browse_file():
+	root = tk.Tk()
+	root.withdraw()  # Hide the root window
+	
+	# Make the window appear on top
+	root.lift()
+	root.call('wm', 'attributes', '.', '-topmost', True)
+	
+	# Show the file dialog
+	file_path = filedialog.askopenfilename(title="Select a file", 
+											filetypes=[("All Files", "*.*"), ("Video Files", "*.mp4 *.mov *.avi")])
+	print(f"Selected file: {file_path}")
+	
+	root.destroy()
+	return file_path
+
+selected_file = browse_file()
+
+
+
+
+
+
+
+
+
+
+cap = cv2.VideoCapture(selected_file)
 ## Setup mediapipe instance
 with mp_pose.Pose(min_detection_confidence=0.5, min_tracking_confidence=0.5) as pose:
 	while cap.isOpened():
 		ret, frame = cap.read()
+		if not ret:
+			print("Failed to grab frame or end of video reached.")
+			break
 		
 		# Recolor image to RGB
 		image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
