@@ -1,6 +1,6 @@
 # The Flying Dragons
 
-Project description (~1 paragraph)
+This piece of software will take in a video of you running process and analyze it, and then give you feedback to improve your running form. It will tell you what you are doing wrong and then tell you how to fix it. The feedback will be advice in the form of words or excercises with visual examples. It will include an easy to use gui.
 
 ## Team Members and Roles
 
