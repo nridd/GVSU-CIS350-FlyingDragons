@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.landing-header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.video-upload-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.upload-box, .video-instructions {
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.upload-box h2, .video-instructions h2 {
+    margin-top: 0;
+}
+
+.video-library {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.video-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.exercise-suggestions {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.exercise-box {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px dashed #ccc;
+}
