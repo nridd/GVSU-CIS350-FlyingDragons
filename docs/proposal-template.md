@@ -10,7 +10,7 @@ Team members:
 For this project, our goal is to create a form analyzing running tool that helps users achieve/improve their running form through a range of interactive features. We aim to provide an intuitive user experience where individuals can input a video of them running and receive assorted visual feedback of their running. The app will support various methods for goal-setting and tracking, offering features such as:
 
 * Joint tracker - A tool to monitor joint health and flexibility, especially useful for tracking recovery from injuries or improving mobility.
-* Exercise Library - A feature that generates stretches tailored to the user’s imported video to address the lack of mobility or potential weaked muscle group. This can also help prepare the body for physical activity and reducing the risk of injury.
+* Exercise Library - A feature that generates stretches tailored to the user’s imported video to address the lack of mobility or potential weaked muscle group. This can also help prepare the body for physical activity and reduce the risk of injury.
 * Goals - A feature were the user can note down his/her goals they want to focus on while using the app. Could be for the stretches giving or a type of improvment on their form.
 * Video library - A feature that gives the user the ability to look back that their previous imported videos.
 
