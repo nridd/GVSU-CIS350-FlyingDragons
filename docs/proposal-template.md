@@ -18,7 +18,6 @@ For this project, our goal is to create a form analyzing running tool that helps
 # Anticipated Technologies
 
 We will use Python for backend development, HTML for frontend development, Google Analytics for user tracking, exercise databases. Testing frameworks, payment integration, user interface and push notifications.
-(What technologies are needed to build this project)
 
 # Method/Approach
 
@@ -35,7 +34,6 @@ We will meet in person or via Zoom for the planning and development of the proje
 
 # Anticipated Problems
 
-(Describe any problems you foresee that you will need to overcome)
 - front-end (Nobody knows any front end. nobody wants to learn front end)
 - fitting together github with other pieces of software
 
