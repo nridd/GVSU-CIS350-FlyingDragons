@@ -28,7 +28,7 @@ We will meet in person or via Zoom for the planning and development of the proje
 - Home Page/ Landing screen (2 weeks)
 - Joint tracker (3 weeks)
 - Video library(2 weeks
-- Exercise recommendations(1-2 weeks)
+- Exercise library(1-2 weeks)
 - Connecting everything and adding front end (2 weeks)
 
 # Anticipated Problems
