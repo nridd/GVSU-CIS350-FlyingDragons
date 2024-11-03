@@ -11,8 +11,9 @@ For this project, our goal is to create a form analyzing running tool that helps
 
 * Joint tracker - A tool to monitor joint health and flexibility, especially useful for tracking recovery from injuries or improving mobility.
 * Warm-up sessions - Guided warm-up routines to prepare the body for physical activity, reducing the risk of injury.
-* Exercise plan creator - A feature that generates personalized workout plans tailored to the user’s fitness level, goals, and preferences.
+* Exercise plan creator - A feature that generates personalized stretches tailored to the user’s fitness needs, goals, and preferences.
 * Goals - A feature were the user can note down his/her goals they want to focus on while using the app. Could be for the stretches giving or a type of improvment on their form.
+* Video library - A feature that gives the user the ability to look back that their previous imported videos.
 
 # Anticipated Technologies
 
