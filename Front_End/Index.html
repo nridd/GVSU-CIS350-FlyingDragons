@@ -1,35 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Fitness Tracker - Home</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fitness Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
 </head>
 <body>
-<!-- Header -->
-<header>
-    <h1>Fitness Tracker App</h1>
-    <nav>
-        <a href="instructions.html">Instructions</a>
-    </nav>
+<!-- Landing Page Header -->
+<header class="landing-header">
+  <h1>Welcome to the Fitness Tracker App</h1>
 </header>
 
-<!-- Video Upload Section -->
-<section class="upload-section">
+<!-- Video Upload and Instructions Section -->
+<div class="video-upload-container">
+  <div class="upload-box">
     <h2>Upload Your Video</h2>
     <input type="file" accept="video/*" id="videoUpload" />
-    <button id="analyzeButton">Analyze Video</button>
-</section>
+    <button class="Analyzer">Analyzer</button>
+  </div>
+
+  <div class="video-instructions">
+    <h2>How to Take the Video</h2>
+    <ul>
+      <li>Take the video from the side.</li>
+      <li>Keep about 20 feet of space between you and the camera.</li>
+      <li>Ensure good lighting and minimal background noise.</li>
+    </ul>
+  </div>
+</div>
 
 <!-- Video Library Section -->
-<section class="video-library">
-    <h2>Your Video Library</h2>
-    <div id="videoList" class="video-list">
-        <!-- Uploaded videos will be displayed here -->
-    </div>
-</section>
+<div class="video-library">
+  <h2>Video Library</h2>
+  <div id="videoList" class="video-list">
+    <!-- Video items will be dynamically added here -->
+  </div>
+</div>
 
+<!-- Exercise Suggestion Box -->
+<div class="exercise-suggestions">
+  <h2>Exercise Suggestions</h2>
+  <div id="ExerciseBox" class="exercise-box">
+    <head>
+      <style>
+        /* Basic styling for the collapsible list */
+        .collapsible {
+          background-color: #f1f1f1;
+          color: #444;
+          cursor: pointer;
+          padding: 10px;
+          width: 100%;
+          border: none;
+          text-align: left;
+          outline: none;
+          font-size: 15px;
+          border-radius: 5px;
+          margin: 5px 0;
+        }
+
+        /* The hidden content */
+        .content {
+          padding: 0 18px;
+          display: none;
+          overflow: hidden;
+          background-color: #f9f9f9;
+        }
+
+        /* Additional hover effect for the button */
+        .collapsible:hover {
+          background-color: #ddd;
+        }
+
+        /* Optional: Add some style for the GIFs */
+        .content img {
+          max-width: 100%;
+          height: auto;
+          border-radius: 5px;
+        }
+      </style>
+    </head>
+    <button class="collapsible">Glute Bridge</button>
+    <div class="content">
+      <p>This will help strengthen your Glutes</p>
+      <p>Squeez your glutes to push your hips up as far as they can go. </p>
+      <p>Do 3 sets of 20, 3 times a week.</p>
+      <img src="https://media.giphy.com/media/3o6Zt8HNhGrJllon68/giphy.gif" alt="GIF for Item 1">
+    </div>
+
+    <button class="collapsible">Supermans</button>
+    <div class="content">
+      <p>This will help strengthen your lowerback.</p>
+      <p>Make sure to squeez at the top of the rep.</p>
+      <p>Do 3 sets of 12, 3 times a week.</p>
+      <img src="https://media.giphy.com/media/3o6Zt8HNhGrJllon68/giphy.gif" alt="GIF for Item 1">
+    </div>
+
+    <button class="collapsible">Plank</button>
+    <div class="content">
+      <p>This will help strengthen your Core</p>
+      <p>When holding the plank try and tuck your bullybutton inward</p>
+      <p>Do 3 sets of 1min, 3 times a week.</p>
+      <img src="https://media.giphy.com/media/3o6Zt8HNhGrJllon68/giphy.gif" alt="GIF for Item 1">
+    </div>
+
+    <button class="collapsible">90 Degrees Hip turn</button>
+    <div class="content">
+      <p>This will help strengthen your hip mobility</p>
+      <p>Make sure your body upright and and not twisting the torso</p>
+      <p>Do 3 sets of 8 each way, 3 times a week.</p>
+      <img src="https://media.giphy.com/media/3o6Zt8HNhGrJllon68/giphy.gif" alt="GIF for Item 1">
+    </div>
+
+    <button class="collapsible">Ankle ABCs</button>
+    <div class="content">
+      <p>This will help strengthen your ankles</p>
+      <p>Do the ABCs with your ankles</p>
+      <p>Do 3 sets of ABCs with both ankles, 3 times a week.</p>
+      <img src="https://media.giphy.com/media/3o6Zt8HNhGrJllon68/giphy.gif" alt="GIF for Item 1">
+    </div>
+
+    <button class="collapsible">Push Ups</button>
+    <div class="content">
+      <p>This will help strengthen your Triceps, Biceps, and Core</p>
+      <p>Tuck in your elbows to get a better Triceps pump</p>
+      <p>Do 3 sets of 20, 3 times a week.</p>
+      <img src="https://media.giphy.com/media/3o6Zt8HNhGrJllon68/giphy.gif" alt="GIF for Item 1">
+    </div>
+
+    <button class="collapsible">Lateral Raises</button>
+    <div class="content">
+      <p>This will help strengthen your upper back </p>
+      <p>Do with an apporprate light weight </p>
+      <p>Do 3 sets of 12, 3 times a week.</p>
+      <img src="https://media.giphy.com/media/3o6Zt8HNhGrJllon68/giphy.gif" alt="GIF for Item 1">
+    </div>
+
+    <button class="collapsible">Clamshells</button>
+    <div class="content">
+      <p>This will help strengthen your Hips</p>
+      <p>For more resistance put a band over your knees</p>
+      <p>Do 3 sets of 12, 3 times a week.</p>
+      <img src="https://media.giphy.com/media/3o6Zt8HNhGrJllon68/giphy.gif" alt="GIF for Item 1">
+    </div>
+  </div>
+</div>
+<script src="Collab.js"></script>
 <script src="script.js"></script>
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/service-worker.js')
+      .then(() => console.log('Service Worker Registered'))
+      .catch((error) => console.log('Service Worker Registration Failed', error));
+  }
+</script>
 </body>
 </html>
-
