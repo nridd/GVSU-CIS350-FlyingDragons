@@ -18,6 +18,7 @@
 15	32	Right Big Toe
 16  7   Left Ear
 17  8   Right Ear
+18  0   Nose
 '''
 import cv2
 import mediapipe as mp
@@ -32,7 +33,7 @@ def get_jd(path):
 	# Open the video file
 	cap = cv2.VideoCapture(path)
 	# List of joint indexes to keep
-	required_joints = [7, 8, 11, 12, 13, 14, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 3, 4]
+	required_joints = [7, 8, 11, 12, 13, 14, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 3, 4, 0]
 	
 	# 3D list to store joint data (frames x joints x coordinates)
 	joint_data = []
@@ -303,9 +304,6 @@ slope_angle = get_slope(new_arr)
 print("The ground is sloped by {:.2f} degrees.".format(slope_angle))
 print(new_arr)
 
-
-
-
 def analyze(path):
 	jd = get_jd(path)
 	hipr=  spcoord(jd, 5)
@@ -314,6 +312,11 @@ def analyze(path):
 	slope = get_slope(hipr)
 	q1 = a1(slope, framedata)
 	#show_frame_from_video(path, framenum)
+	a2(framedata, slope)
+	a3(jd)
+	
+	
+	
 
 def anal_image(path):
 	framedata = get_jdimage(path)
@@ -453,11 +456,112 @@ def calculate_angle(shoulder, hip, ground_slope=0):
 	return np.degrees(angle_radians)
 
 
+def a2(frame_data, ground_slope):
+		"""
+		Analyzes head tilt based on the slope between the nose and the right ear,
+		adjusted for the slope of the ground.
+
+		Parameters:
+				frame_data (2D list): A 2D array of joint data for the frame, where each
+															row contains [x, y, z] for a joint.
+															- Nose is at index 18
+															- Right ear is at index 17
+				ground_slope (float): The slope of the ground in degrees.
+
+		Prints:
+				A message indicating if the person needs to keep their eyes up.
+		"""
+		# Get the coordinates for the nose and the right ear
+		nose = frame_data[18][:2]  # [x, y]
+		right_ear = frame_data[17][:2]  # [x, y]
+	
+		# Calculate the slope between the ear and the nose
+		delta_x = nose[0] - right_ear[0]
+		delta_y = nose[1] - right_ear[1]
+	
+		# Slope in degrees
+		slope_nose_to_ear = np.degrees(np.arctan2(delta_y, delta_x))
+	
+		# Adjust for the ground slope
+		adjusted_slope = slope_nose_to_ear - ground_slope
+	
+		print(f"Slope from right ear to nose: {slope_nose_to_ear:.2f} degrees")
+		print(f"Adjusted slope (considering ground): {adjusted_slope:.2f} degrees")
+	
+		# Check if the slope is inappropriate
+		if adjusted_slope <= 0:
+				print("Posture analysis: Keep your eyes up while running.")
+		else:
+				print("Posture analysis: Head position looks good!")
 
 
 
+import numpy as np
 
+def a3(joint_data):
+	"""
+	Analyzes if the elbow crosses behind and in front of the line between the shoulder and hip.
+	If the elbow movement is insufficient, it provides suggestions for improvement.
 
+	Parameters:
+		joint_data (numpy.ndarray): A 3D array with shape [frames, joints, positions],
+									where joints include:
+									- Left Elbow: Index 0
+									- Left Shoulder: Index 2
+									- Left Hip: Index 4
+
+	Prints:
+		Posture analysis and recommendations if arm swing is insufficient.
+	"""
+	# Indices for the joints of interest
+	LEFT_ELBOW = 0
+	LEFT_SHOULDER = 2
+	LEFT_HIP = 4
+	
+	insufficient_swing = False
+	
+	for frame in range(len(joint_data)):
+		# Extract the relevant joint coordinates for the current frame
+		elbow = joint_data[frame][LEFT_ELBOW][:2]  # [x, y]
+		shoulder = joint_data[frame][LEFT_SHOULDER][:2]  # [x, y]
+		hip = joint_data[frame][LEFT_HIP][:2]  # [x, y]
+		
+		# Vector from shoulder to hip
+		vector_shoulder_to_hip = [hip[0] - shoulder[0], hip[1] - shoulder[1]]
+		
+		# Vector from shoulder to elbow
+		vector_shoulder_to_elbow = [elbow[0] - shoulder[0], elbow[1] - shoulder[1]]
+		
+		# Calculate cross product to determine relative position
+		cross_product = (
+			vector_shoulder_to_hip[0] * vector_shoulder_to_elbow[1]
+			- vector_shoulder_to_hip[1] * vector_shoulder_to_elbow[0]
+		)
+		
+		# Check if elbow crosses the line defined by shoulder and hip
+		if cross_product > 0:
+			xxxxxx
+			#print(f"Frame {frame}: Elbow is in front of the shoulder-hip line.")
+		elif cross_product < 0:
+			xxxxxx
+			#print(f"Frame {frame}: Elbow is behind the shoulder-hip line.")
+		else:
+			xxxxxx=0
+			#print(f"Frame {frame}: Elbow is exactly on the shoulder-hip line.")
+			
+		# Check if the elbow does not cross both directions
+		if cross_product == 0 or abs(cross_product) < 1e-3:
+			insufficient_swing = True
+			
+	if insufficient_swing:
+		print("Posture analysis: You are not swinging your arms enough.")
+		print("Recommendations: Improve arm swing with exercises like:")
+		print("- 3-way shoulders")
+		print("- Running arms")
+		print("- Push-ups for chest, back, and shoulders")
+	else:
+		print("Posture analysis: Good arm swing detected!")
+		
 
 
 
@@ -490,4 +594,3 @@ print('Benny boy')
 analyze('/Users/nridd/Downloads/Ben.mov')
 print('reset')
 print('reset')
-
