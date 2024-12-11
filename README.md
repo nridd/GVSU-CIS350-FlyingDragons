@@ -4,9 +4,9 @@ This piece of software will take in a video of you running, process and analyze 
 
 ## Team Members and Roles
 
-* [Gerald Capaccio](https://github.com/JerryCap/CIS350-HW2-Capaccio.git) (Developer)
-* [Nathan Riddering](https://github.com/nridd/CIS350-HW2-Riddering.git)(Team Lead, Role 1)
-* [Samuel Schwallier](https://github.com/schwalls/CIS350-HW2--Schwallier-) (Developer, Role 5)
+* [Gerald Capaccio](https://github.com/JerryCap/CIS350-HW2-Capaccio.git) (Front/Back end Developer, Project Planner)
+* [Nathan Riddering](https://github.com/nridd/CIS350-HW2-Riddering.git)(Team Lead,Back-end Developer Role 1)
+* [Samuel Schwallier](https://github.com/schwalls/CIS350-HW2--Schwallier-) (Front-end Developer, Role 5)
 ## Prerequisites
 
 ## Run Instructions
