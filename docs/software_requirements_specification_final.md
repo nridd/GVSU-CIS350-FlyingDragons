@@ -5,7 +5,6 @@ The purpose of the document is to show our functional and Non-Functional require
 # Functional Requirements
 
 1. **Analysis Response**
-   - 
    - The software shall give you real-time feedback
    - The software shall give personilized recommendations 
 2. **Video input**
