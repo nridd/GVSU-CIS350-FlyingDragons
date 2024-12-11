@@ -10,14 +10,6 @@ This piece of software will take in a video of you running, process and analyze 
 ## Prerequisites
 
 # Introduction
-For this project, our goal is to create a form analyzing running tool that helps users achieve/improve their running form through a range of interactive features. We aim to provide an intuitive user experience where individuals can input a video of them running and receive assorted visual feedback of their running. The app will support various methods for goal-setting and tracking, offering features such as:
-
-* Joint tracker - A tool to monitor joint health and flexibility, especially useful for tracking recovery from injuries or improving mobility.
-* Exercise Library - A feature that generates stretches tailored to the user’s imported video to address the lack of mobility or potential weaked muscle group. This can also help prepare the body for physical activity and reduce the risk of injury.
-* Video library - A feature that gives the user the ability to look back that their previous imported videos.
-* Goals - A feature were the user can note down his/her goals they want to focus on while using the app.
-# Method/Approach
-Our development approach will follow an agile methodology. The project will be divided into smaller, manageable tasks, allowing us to focus on one feature at a time. This will ensure that each part of the project is built, tested, and refined progressively, with regular adjustments based on feedback and testing results.
-We will meet in person or via Zoom for the planning and development of the project, in addition to individual work at home. All team members will take turns developing code, tests, and documentation to provide learning opportunities for everyone in different areas.
+F.A.R.T or Form Analyzer Running Tool is a Form running analying app.For this project, We plan to make a tool that helps users achieve/improve their running form through a range of interactive features. We aim to provide an intuitive user experience where individuals can input a video of them running and receive assorted visual feedback of their running. The app will support various methods for goal-setting and tracking, offering features such as a joint tracker to monitor joint health and flexibility, especially useful for tracking recovery from injuries or improving mobility. An Exercise Library that generates stretches tailored to the user’s imported video to address the lack of mobility or potential weaked muscle group. This can also help prepare the body for physical activity and reduce the risk of injury. A Video library that gives the user the ability to look back that their previous imported videos.
 
 ## Run Instructions
